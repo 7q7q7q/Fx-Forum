@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Перенаправление в адресную строку</title>
+</head>
+<body>
+<div style="text-align: center;">
+<input type="text" id="myInput" placeholder="Введите текст...">
+<p><button onclick="redirectToURL()">Открыть ссылку</button></p>
+</div>
+<script>
+    function redirectToURL() {
+        // Получаем значение из input
+        let inputValue = document.getElementById('myInput').value;
+        
+        // Добавляем нужный текст перед значением
+        let fullURL = 'http://127.0.0.1:5500/p/' + inputValue;
+        
+        // Перенаправляем на новый URL
+        window.location.href = fullURL;
+    }
+</script>
+
+</body>
+</html>
